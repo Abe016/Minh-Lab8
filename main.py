@@ -7,6 +7,17 @@ def encode(password):
         encoded_password += encoded_digit
     return encoded_password
 
+def decode(password):
+    result = ""
+    for x in str(password):
+        if int(x) > 3:
+            result += str(int(x) - 3)
+        else:
+            result += str(int(x) + 6)
+
+
+    return int(result)
+
 if __name__ == "__main__":
     while True:
         print("1. Encode password\n2. Decode password\n3. Exit\n")
